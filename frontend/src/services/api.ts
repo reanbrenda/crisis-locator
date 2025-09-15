@@ -1,6 +1,6 @@
 import { CrisisResource, ApiResponse } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_BASE_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/api' : 'http://localhost:3001');
 
 export class CrisisResourceAPI {
   static async searchResources(location: string, category: string): Promise<ApiResponse> {

@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
+
 interface CrisisResource {
   id: number;
   name: string;
@@ -193,9 +194,9 @@ app.use((error: Error, req: Request, res: Response, next: any) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📊 Health check: http://localhost:${PORT}/api/health`);
-  console.log(`🔍 Resources API: http://localhost:${PORT}/api/resources`);
+  console.log(`Server running on port ${PORT}`);
+  console.log(`Health check: http://localhost:${PORT}/api/health`);
+  console.log(`Resources API: http://localhost:${PORT}/api/resources`);
 });
 
 module.exports = app;
